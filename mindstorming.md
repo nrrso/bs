@@ -77,7 +77,7 @@
 
 
 ###_4_
-
+[Unterschiede zwischen 32 und 64 bit](https://www.tortall.net/projects/yasm/manual/html/objfmt-elf64.html)
 
 ###_5_
 
