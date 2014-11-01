@@ -78,6 +78,8 @@
 
 ###_4_
 [Unterschiede zwischen 32 und 64 bit](https://www.tortall.net/projects/yasm/manual/html/objfmt-elf64.html)
+- "elf64 also supports the exact same sections, section attributes, and directives as elf32"
+- "The primary difference between elf32 and elf64 (other than 64-bit support in general) is the differences in shared library handling and position-independent code. As BITS 64 enables the use of RIP-relative addressing, most variable accesses can be relative to RIP, allowing easy relocation of the shared library to a different memory address."
 
 ###_5_
 
