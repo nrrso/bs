@@ -13,6 +13,8 @@
 - dynamisches Linken und Laden
 - Kontrolle über bereits laufende Programme
 - einfache Möglichkeit, dynamische Bibliotheken zu erzeugen
+- ELF stellt ein Framework bereit, welches verschiedene Prozessoren und Datenformatierungen unterstützt
+	- die ersten Bytes der Datei geben an, wie die Datei zu interpretieren ist, unabhängig von der Prozessorart oder des restlichen Inhalts der Datei
 
 ### _Aufbau_
 **besteht aus 5 Teilen**:
@@ -49,6 +51,7 @@
 	- relocation information
 
 #### Segments (Execution View)
+- nötige Informationen zur Ausführung des Programms
 
 #### Section Header Table
 - beschreibt die Sections der Datei
