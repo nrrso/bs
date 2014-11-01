@@ -28,6 +28,15 @@
 #### relocatable file
 - beinhaltet Informationen, wie Objektdateien verlinkt werden sollen, um ein Programm oder eine dynamische Bibliothek zu erzeugen
 
+```Relocation is the process of connecting symbolic references with symbolic
+definitions. For example, when a program calls a function, the associated 
+call instruction must transfer control to the proper destination address 
+at execution. In other words, relocatable files must have information that
+describes how to modify their section contents, thus allowing executable 
+and shared object files to hold the right information for a process's 
+program image. Relocation entries are these data.
+```
+
 #### executable file
 - beinhaltet Informationen, wie das Programm ausgeführt werden soll
 
@@ -36,12 +45,25 @@
 
 ![](res/linking_executable_view.jpg)
 
+***
+
 #### ELF Header
 - beschreibt den Aufbau der Datei
 
 #### Program Header Table
 - Informationen zur Prozesserzeugung
 - nicht benötigt bei relocatable files
+
+```
+
+An executable or shared object file's program header table is an array 
+of structures, each describing a segment or other information the system 
+needs to prepare the program for execution. An object file segment 
+contains one or more sections. Program headers are meaningful only for
+executable and shared object files. A file specifies its own program 
+header size with the ELF header's e_phentsize and e_phnum members
+
+```
 
 #### Sections (Linking View)
 - beinhalten die Object File Informationen
@@ -54,12 +76,19 @@
 - nötige Informationen zur Ausführung des Programms
 
 #### Section Header Table
-- beschreibt die Sections der Datei
+- beschreibt die Sections der Datei und wo sie zu finden sind
 	- jede Section hat einen Eintrag:
 		- section name
 		- section size
 		- etc.
 - nicht benötigt bei executable files
+
+***
+
+### Program LoadingProgram loading is the process by which the operating system creates or augments a process image. The manner in which this process is accomplished and how the page management functions for the process are handled are dictated by the operating system and processor.
+
+### Dynamic Linking
+The dynamic linking process resolves references either at process initialization time and/or at execution time. Some basic mechanisms need to be set up for a particular linkage model to work, and there are ELF sections and header elements reserved for this purpose. The actual definition of the linkage model is determined by the operating system and implementation. Therefore, the contents of these sections are both operating system and processor specific. 
 
 ## <center>_Lösungen der Aufgaben_</center>
 ###_1_
