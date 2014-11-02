@@ -122,14 +122,23 @@ The dynamic linking process resolves references either at process initialization
 -	- ![](res/EI_Class.jpg)
 
 ###_5_
-*Program-Header*
-Die Programm-Headertabelle gibt dem System Hinweise, wie die Daten einer ausfuh¨ rbaren
+**Program-Header**
+Die Programm-Headertabelle gibt dem System Hinweise, wie die Daten einer ausführbaren
 Datei im virtuellen Adressraum eines Prozesses angeordnet werden sollen. Außerdem wird
 geregelt, wie viele Sektionen in der Datei enthalten sind, wo sie sich befinden und welchem
 Zweck sie dienen.
-Quelle: **http://www.linux-kernel.de/appendix/ap05.pdf**
 
+Quelle: *http://www.linux-kernel.de/appendix/ap05.pdf*
 
+**Sektionen**
+Sektionen im ELF-Format unterstützen Attribute zur Beschreibung der Semantik von Daten einer Sektion, welche dem OS ermöglichen diese angemessen zu verarbeiten.
+
+Attribute:
+* alloc - Inhalt in den Memory, nicht für Metadaten
+* exec - Berechtigung zur Ausführbarkeit
+* write - Beschreibbar während Ausführung
+* progbits - Gegenstück zu alloc. Inhalt auf DISK ablegen.
+* align - Speicherausrichtung
 
 
 ###_6_ 
